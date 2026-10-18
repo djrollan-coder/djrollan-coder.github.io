@@ -127,3 +127,5 @@ footer nav { margin: 0; gap: 18px; flex-wrap: wrap; }
 .badge.soon { background: color-mix(in srgb, #ff9f0a 18%, transparent); color: #ff9f0a; }
 .back { color: var(--muted); font-size: 15px; }
 .hero.app-hero img.icon { border-radius: 30px; }
+.brand, .back { white-space: nowrap; }
+@media (max-width: 640px) { .back { display: none; } }
