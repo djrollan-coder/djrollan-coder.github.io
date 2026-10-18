@@ -31,7 +31,7 @@
     <p class="lead" data-i18n="heroLead">Hold ⌘ and drag over images, videos, PDFs or any app — the text is instantly in your clipboard. Translate it, fix the keyboard layout and keep a clipboard history.</p>
     <div class="cta">
       <a class="btn primary" href="download/Lingrab.zip" data-i18n="download">Download free</a>
-      <a class="btn js-buy" href="#pricing"><span data-i18n="buyPro">Buy Pro</span> <small>$9.99</small></a>
+      <a class="btn js-buy" href="#pricing"><span data-i18n="buyPro">Buy Pro</span> <small>€9.99</small></a>
     </div>
     <p class="req" data-i18n="requirements">macOS 14 Sonoma or later · Apple Silicon &amp; Intel · 7-day free trial of Pro</p>
 
@@ -69,7 +69,7 @@
       <div class="pricing">
         <div class="plan">
           <h3 data-i18n="free">Free</h3>
-          <div class="price">$0</div>
+          <div class="price">€0</div>
           <div class="note" data-i18n="freeNote">Forever</div>
           <ul>
             <li data-i18n="p1">Copy text from screen</li>
@@ -82,7 +82,7 @@
         </div>
         <div class="plan pro">
           <h3>Pro</h3>
-          <div class="price">$9.99</div>
+          <div class="price">€9.99</div>
           <div class="note" data-i18n="proNote">One-time purchase · up to 3 Macs</div>
           <ul>
             <li data-i18n="pAll">Everything in Free</li>
@@ -122,7 +122,7 @@
 
 <script>
 // Ссылка на оплату Lemon Squeezy — вписать после создания товара.
-const CHECKOUT_URL = "";
+const CHECKOUT_URL = "https://iroll.lemonsqueezy.com/checkout/buy/292ba043-1441-4a33-a5b5-6f1a2bed86dd";
 document.querySelectorAll(".js-buy").forEach(a => {
   if (CHECKOUT_URL) { a.href = CHECKOUT_URL; a.target = "_blank"; a.rel = "noopener"; }
   else a.href = "#pricing";
