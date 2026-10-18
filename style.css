@@ -111,3 +111,19 @@ footer nav { margin: 0; gap: 18px; flex-wrap: wrap; }
 .doc .updated { color: var(--muted); margin-top: 0; }
 .doc h2 { font-size: 21px; margin-top: 34px; }
 .doc p, .doc li { color: var(--text); }
+
+/* Главная со всеми проектами */
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
+.app { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line);
+  border-radius: 22px; padding: 26px; color: var(--text); transition: transform .15s, border-color .15s; }
+.app:hover { text-decoration: none; transform: translateY(-3px); border-color: var(--accent); }
+.app img { width: 84px; height: 84px; border-radius: 19px; margin-bottom: 16px; }
+.app h3 { margin: 0 0 4px; font-size: 22px; }
+.app .plat { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+.app p { color: var(--muted); margin: 0 0 18px; font-size: 15px; flex: 1; }
+.app .more { font-weight: 600; color: var(--accent); }
+.badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent); margin-left: 6px; vertical-align: middle; }
+.badge.soon { background: color-mix(in srgb, #ff9f0a 18%, transparent); color: #ff9f0a; }
+.back { color: var(--muted); font-size: 15px; }
+.hero.app-hero img.icon { border-radius: 30px; }

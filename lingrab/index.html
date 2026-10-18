@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lingrab — copy &amp; translate text from anywhere on your Mac</title>
+<meta name="description" content="Lingrab is a Mac menu bar app: hold ⌘ and drag to copy text from anywhere on screen, translate it, fix the wrong keyboard layout and keep clipboard history.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon.png" alt="">Lingrab</a>
+    <nav>
+      <a class="back" href="../">← All apps</a>
+      <a class="hide-sm" href="#features" data-i18n="navFeatures">Features</a>
+      <a class="hide-sm" href="#pricing" data-i18n="navPricing">Pricing</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <select class="lang" id="lang" aria-label="Language">
+        <option value="en">English</option><option value="ru">Русский</option><option value="uk">Українська</option>
+      </select>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <img class="icon" src="assets/icon.png" alt="Lingrab icon">
+    <h1 data-i18n-html="heroTitle">Grab text from <span>anywhere</span> on your screen</h1>
+    <p class="lead" data-i18n="heroLead">Hold ⌘ and drag over images, videos, PDFs or any app — the text is instantly in your clipboard. Translate it, fix the keyboard layout and keep a clipboard history.</p>
+    <div class="cta">
+      <a class="btn primary" href="download/Lingrab.zip" data-i18n="download">Download free</a>
+      <a class="btn js-buy" href="#pricing"><span data-i18n="buyPro">Buy Pro</span> <small>$9.99</small></a>
+    </div>
+    <p class="req" data-i18n="requirements">macOS 14 Sonoma or later · Apple Silicon &amp; Intel · 7-day free trial of Pro</p>
+
+    <div class="demo" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="page">
+        <div class="sel"></div>
+        <p><b>Meeting notes — Q4 plan</b><br>
+        Launch the new onboarding flow by November 15.<br>
+        Budget approved: €12,400. Owner: Maria K.</p>
+        <p>Next review on Thursday at 10:00 in room 4B.</p>
+        <div class="keys"><kbd>⌘</kbd> + drag</div>
+        <div class="toast" data-i18n="demoToast">Copied: Meeting notes — Q4 plan…</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2 data-i18n="featuresTitle">Everything in one tiny menu bar app</h2>
+      <div class="grid">
+        <div class="card"><div class="ico">🔍</div><h3 data-i18n="f1t">Copy text from screen</h3><p data-i18n="f1d">Hold ⌘ and drag. Works with screenshots, videos, PDFs, games and apps that don't let you select text.</p></div>
+        <div class="card"><div class="ico">🌐</div><h3 data-i18n="f2t">Instant translation</h3><p data-i18n="f2d">Hold ⌥⌘ and drag to see a translation right next to the cursor. Uses Apple's built-in translator, works offline.</p></div>
+        <div class="card"><div class="ico">⌨️</div><h3 data-i18n="f3t">Wrong layout fixer</h3><p data-i18n="f3d">Typed “ghbdtn” instead of “привет”? Lingrab fixes the word and switches the layout automatically.</p></div>
+        <div class="card"><div class="ico">📋</div><h3 data-i18n="f4t">Clipboard history</h3><p data-i18n="f4d">Everything you copy is right in the menu — one click to copy again. Passwords from password managers are skipped.</p></div>
+        <div class="card"><div class="ico">🗣️</div><h3 data-i18n="f5t">18 recognition languages</h3><p data-i18n="f5d">English, Russian, Ukrainian, German, French, Spanish, Chinese, Japanese, Korean and more. Interface in 12 languages.</p></div>
+        <div class="card"><div class="ico">🔒</div><h3 data-i18n="f6t">Private by design</h3><p data-i18n="f6d">Recognition and translation run on your Mac. Your screen and text never leave your computer.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2 data-i18n="pricingTitle">Simple pricing</h2>
+      <div class="pricing">
+        <div class="plan">
+          <h3 data-i18n="free">Free</h3>
+          <div class="price">$0</div>
+          <div class="note" data-i18n="freeNote">Forever</div>
+          <ul>
+            <li data-i18n="p1">Copy text from screen</li>
+            <li data-i18n="p2">Wrong layout fixer</li>
+            <li data-i18n="p3">Clipboard history (20 items)</li>
+            <li class="no" data-i18n="p4">Translation</li>
+            <li class="no" data-i18n="p5">Custom shortcuts</li>
+          </ul>
+          <a class="btn" href="download/Lingrab.zip" data-i18n="download">Download free</a>
+        </div>
+        <div class="plan pro">
+          <h3>Pro</h3>
+          <div class="price">$9.99</div>
+          <div class="note" data-i18n="proNote">One-time purchase · up to 3 Macs</div>
+          <ul>
+            <li data-i18n="pAll">Everything in Free</li>
+            <li data-i18n="p4">Translation</li>
+            <li data-i18n="p6">Clipboard history (up to 500)</li>
+            <li data-i18n="p5">Custom shortcuts</li>
+            <li data-i18n="p7">Free updates</li>
+          </ul>
+          <a class="btn primary js-buy" href="#" data-i18n="buyPro">Buy Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <details><summary data-i18n="q1">How do I install Lingrab?</summary><p data-i18n="a1">Download the zip, move Lingrab to Applications and open it. macOS will ask for Accessibility and Screen Recording permissions — they are needed to detect ⌘ + drag and read the selected area.</p></details>
+      <details><summary data-i18n="q2">How do I activate Pro?</summary><p data-i18n="a2">After purchase you receive a license key by email. Open Lingrab → Settings → License, paste the key and click Activate.</p></details>
+      <details><summary data-i18n="q3">Does Lingrab send my screen anywhere?</summary><p data-i18n="a3">No. Text recognition and translation happen on your Mac. The only network request is the license key check.</p></details>
+      <details><summary data-i18n="q4">Can I get a refund?</summary><p data-i18n-html="a4">Yes, within 14 days of purchase. See the <a href="refund.html">refund policy</a>.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Roman Motorniy · Lingrab</span>
+    <nav>
+      <a href="terms.html" data-i18n="terms">Terms</a>
+      <a href="privacy.html" data-i18n="privacy">Privacy</a>
+      <a href="refund.html" data-i18n="refund">Refunds</a>
+      <a href="mailto:djrollan1@gmail.com">djrollan1@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// Ссылка на оплату Lemon Squeezy — вписать после создания товара.
+const CHECKOUT_URL = "";
+document.querySelectorAll(".js-buy").forEach(a => {
+  if (CHECKOUT_URL) { a.href = CHECKOUT_URL; a.target = "_blank"; a.rel = "noopener"; }
+  else a.href = "#pricing";
+});
+
+const T = {
+  ru: {
+    navFeatures: "Возможности", navPricing: "Цены",
+    heroTitle: "Хватайте текст <span>откуда угодно</span> на экране",
+    heroLead: "Зажмите ⌘ и выделите область на картинке, видео, PDF или в любой программе — текст сразу в буфере обмена. Переводите его, исправляйте раскладку и храните историю буфера.",
+    download: "Скачать бесплатно", buyPro: "Купить Pro",
+    requirements: "macOS 14 Sonoma или новее · Apple Silicon и Intel · 7 дней Pro бесплатно",
+    demoToast: "Скопировано: Meeting notes — Q4 plan…",
+    featuresTitle: "Всё в одной маленькой программе в строке меню",
+    f1t: "Текст с экрана", f1d: "Зажмите ⌘ и выделите. Работает со скриншотами, видео, PDF, играми и программами, где текст не выделяется.",
+    f2t: "Мгновенный перевод", f2d: "Зажмите ⌥⌘ и выделите — перевод появится рядом с курсором. Встроенный переводчик Apple, работает офлайн.",
+    f3t: "Исправление раскладки", f3d: "Набрали «ghbdtn» вместо «привет»? Lingrab исправит слово и сам переключит раскладку.",
+    f4t: "История буфера", f4d: "Всё скопированное — прямо в меню, повторно скопировать в один клик. Пароли из менеджеров паролей не сохраняются.",
+    f5t: "18 языков распознавания", f5d: "Английский, русский, украинский, немецкий, французский, испанский, китайский, японский, корейский и другие. Интерфейс на 12 языках.",
+    f6t: "Конфиденциально", f6d: "Распознавание и перевод работают на вашем Mac. Экран и текст никуда не отправляются.",
+    pricingTitle: "Простые цены", free: "Бесплатно", freeNote: "Навсегда",
+    p1: "Копирование текста с экрана", p2: "Исправление раскладки", p3: "История буфера (20 записей)",
+    p4: "Перевод", p5: "Свои сочетания клавиш", p6: "История буфера (до 500)", p7: "Бесплатные обновления",
+    pAll: "Всё из бесплатной версии", proNote: "Разовая покупка · до 3 Mac",
+    q1: "Как установить Lingrab?", a1: "Скачайте архив, перенесите Lingrab в «Программы» и откройте. macOS попросит разрешения «Универсальный доступ» и «Запись экрана» — они нужны, чтобы видеть ⌘ + выделение и читать выбранную область.",
+    q2: "Как активировать Pro?", a2: "После покупки вам на почту придёт лицензионный ключ. Откройте Lingrab → Настройки → Лицензия, вставьте ключ и нажмите «Активировать».",
+    q3: "Lingrab отправляет мой экран куда-то?", a3: "Нет. Распознавание и перевод происходят на вашем Mac. В интернет уходит только проверка лицензионного ключа.",
+    q4: "Можно вернуть деньги?", a4: "Да, в течение 14 дней после покупки. Подробнее — в <a href=\"refund.html\">политике возврата</a>.",
+    terms: "Условия", privacy: "Конфиденциальность", refund: "Возврат",
+  },
+  uk: {
+    navFeatures: "Можливості", navPricing: "Ціни",
+    heroTitle: "Хапайте текст <span>звідки завгодно</span> на екрані",
+    heroLead: "Затисніть ⌘ і виділіть область на зображенні, відео, PDF чи в будь-якій програмі — текст одразу в буфері обміну. Перекладайте його, виправляйте розкладку й зберігайте історію буфера.",
+    download: "Завантажити безкоштовно", buyPro: "Купити Pro",
+    requirements: "macOS 14 Sonoma або новіша · Apple Silicon та Intel · 7 днів Pro безкоштовно",
+    demoToast: "Скопійовано: Meeting notes — Q4 plan…",
+    featuresTitle: "Усе в одній маленькій програмі в рядку меню",
+    f1t: "Текст з екрана", f1d: "Затисніть ⌘ і виділіть. Працює зі знімками екрана, відео, PDF, іграми та програмами, де текст не виділяється.",
+    f2t: "Миттєвий переклад", f2d: "Затисніть ⌥⌘ і виділіть — переклад з’явиться біля курсора. Вбудований перекладач Apple, працює офлайн.",
+    f3t: "Виправлення розкладки", f3d: "Набрали «ghbdtn» замість «привет»? Lingrab виправить слово й сам перемкне розкладку.",
+    f4t: "Історія буфера", f4d: "Усе скопійоване — просто в меню, повторно скопіювати в один клік. Паролі з менеджерів паролів не зберігаються.",
+    f5t: "18 мов розпізнавання", f5d: "Англійська, українська, російська, німецька, французька, іспанська, китайська, японська, корейська та інші. Інтерфейс 12 мовами.",
+    f6t: "Конфіденційно", f6d: "Розпізнавання й переклад працюють на вашому Mac. Екран і текст нікуди не надсилаються.",
+    pricingTitle: "Прості ціни", free: "Безкоштовно", freeNote: "Назавжди",
+    p1: "Копіювання тексту з екрана", p2: "Виправлення розкладки", p3: "Історія буфера (20 записів)",
+    p4: "Переклад", p5: "Власні сполучення клавіш", p6: "Історія буфера (до 500)", p7: "Безкоштовні оновлення",
+    pAll: "Усе з безкоштовної версії", proNote: "Разова покупка · до 3 Mac",
+    q1: "Як встановити Lingrab?", a1: "Завантажте архів, перенесіть Lingrab у «Програми» й відкрийте. macOS попросить дозволи «Доступність» і «Запис екрана» — вони потрібні, щоб бачити ⌘ + виділення й читати вибрану область.",
+    q2: "Як активувати Pro?", a2: "Після покупки на пошту прийде ліцензійний ключ. Відкрийте Lingrab → Параметри → Ліцензія, вставте ключ і натисніть «Активувати».",
+    q3: "Lingrab кудись надсилає мій екран?", a3: "Ні. Розпізнавання й переклад відбуваються на вашому Mac. В інтернет іде лише перевірка ліцензійного ключа.",
+    q4: "Чи можна повернути гроші?", a4: "Так, протягом 14 днів після покупки. Детальніше — у <a href=\"refund.html\">політиці повернення</a>.",
+    terms: "Умови", privacy: "Конфіденційність", refund: "Повернення",
+  },
+};
+
+const sel = document.getElementById("lang");
+const en = {};
+document.querySelectorAll("[data-i18n]").forEach(e => en[e.dataset.i18n] ??= e.textContent);
+document.querySelectorAll("[data-i18n-html]").forEach(e => en[e.dataset.i18nHtml] ??= e.innerHTML);
+
+function apply(lang) {
+  const t = T[lang] || {};
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(e => e.textContent = t[e.dataset.i18n] ?? en[e.dataset.i18n]);
+  document.querySelectorAll("[data-i18n-html]").forEach(e => e.innerHTML = t[e.dataset.i18nHtml] ?? en[e.dataset.i18nHtml]);
+  sel.value = lang;
+  try { localStorage.setItem("lang", lang); } catch {}
+}
+let saved = null;
+try { saved = localStorage.getItem("lang"); } catch {}
+const browser = (navigator.language || "en").slice(0, 2);
+apply(saved || (T[browser] ? browser : "en"));
+sel.addEventListener("change", () => apply(sel.value));
+</script>
+</body>
+</html>
