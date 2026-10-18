@@ -47,7 +47,7 @@ nav a { color: var(--muted); }
 .btn small { font-weight: 400; opacity: .8; }
 
 /* Главный блок */
-.hero { text-align: center; padding: 80px 0 40px; }
+.hero { text-align: center; padding: 80px 20px 40px; }
 .hero img.icon { width: 132px; height: 132px; filter: drop-shadow(0 18px 40px rgba(91,108,255,.35)); }
 .hero h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.08; margin: 24px 0 14px; letter-spacing: -0.02em; }
 .hero h1 span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -129,3 +129,79 @@ footer nav { margin: 0; gap: 18px; flex-wrap: wrap; }
 .hero.app-hero img.icon { border-radius: 30px; }
 .brand, .back { white-space: nowrap; }
 @media (max-width: 640px) { .back { display: none; } }
+
+/* Оформление: свечение в цвет приложения.
+   Страница задаёт --glow и --glow2 на body, по умолчанию — фирменные цвета сайта. */
+body { --glow: var(--accent); --glow2: var(--accent2); position: relative; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(900px 520px at 15% -10%, color-mix(in srgb, var(--glow) 22%, transparent), transparent 70%),
+    radial-gradient(800px 500px at 90% 0%, color-mix(in srgb, var(--glow2) 18%, transparent), transparent 70%),
+    radial-gradient(1000px 600px at 50% 110%, color-mix(in srgb, var(--glow) 10%, transparent), transparent 70%); }
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .5;
+  background-image: radial-gradient(color-mix(in srgb, var(--text) 9%, transparent) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%); mask-image: linear-gradient(to bottom, #000, transparent 70%); }
+.hero h1 span { background-image: linear-gradient(135deg, var(--glow), var(--glow2)); }
+.btn.primary { background: linear-gradient(135deg, var(--glow), var(--glow2));
+  box-shadow: 0 10px 30px -8px color-mix(in srgb, var(--glow) 60%, transparent); }
+.badge.soon::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor; margin-right: 6px; vertical-align: 1px; animation: pulse 1.8s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+
+/* Иконка приложения: ореол и кольца */
+.app-hero { position: relative; }
+.app-hero .halo { position: relative; width: 132px; height: 132px; margin: 0 auto; }
+.app-hero .halo::before, .app-hero .halo::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--glow) 30%, transparent); inset: -46px; }
+.app-hero .halo::after { inset: -96px; border-color: color-mix(in srgb, var(--glow2) 16%, transparent); }
+.app-hero .halo img.icon { position: relative; z-index: 1;
+  filter: drop-shadow(0 22px 50px color-mix(in srgb, var(--glow) 55%, transparent)); animation: float 6s ease-in-out infinite; }
+.app-hero .halo .blur { position: absolute; inset: -30px; border-radius: 50%; filter: blur(50px);
+  background: radial-gradient(circle, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%); }
+.app-hero h1 { margin-top: 56px; }
+@keyframes float { 50% { transform: translateY(-8px); } }
+
+/* Карточки возможностей в цвет приложения */
+.card { position: relative; overflow: hidden; transition: transform .15s, border-color .15s; }
+.card::before { content: ""; position: absolute; inset: 0 0 auto; height: 2px;
+  background: linear-gradient(90deg, var(--glow), var(--glow2)); opacity: .7; }
+.card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--glow) 50%, var(--line)); }
+.card .ico { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; font-size: 24px;
+  background: color-mix(in srgb, var(--glow) 16%, transparent); }
+
+/* Главная: стопка иконок над заголовком */
+.stack { display: flex; justify-content: center; margin: 0 auto 8px; padding-top: 10px; }
+.stack a { display: block; width: 76px; height: 76px; margin: 0 -8px; border-radius: 18px; transition: transform .2s; }
+.stack img { width: 100%; height: 100%; border-radius: 18px; box-shadow: 0 16px 34px -10px rgba(0,0,0,.6);
+  border: 1px solid color-mix(in srgb, #fff 10%, transparent); }
+.stack a:nth-child(1) { transform: rotate(-12deg) translateY(14px); }
+.stack a:nth-child(2) { transform: rotate(-6deg) translateY(2px); }
+.stack a:nth-child(3) { transform: translateY(-4px) scale(1.08); z-index: 1; }
+.stack a:nth-child(4) { transform: rotate(6deg) translateY(2px); }
+.stack a:nth-child(5) { transform: rotate(12deg) translateY(14px); }
+.stack a:hover { transform: translateY(-10px) scale(1.1); z-index: 2; }
+@media (max-width: 480px) { .stack a { width: 58px; height: 58px; margin: 0 -6px; } }
+
+/* Главная: карточки приложений со своим цветом */
+.app { position: relative; overflow: hidden; isolation: isolate; }
+.app::before { content: ""; position: absolute; z-index: -1; width: 260px; height: 260px; top: -120px; right: -90px;
+  border-radius: 50%; filter: blur(40px); opacity: .35; transition: opacity .2s;
+  background: radial-gradient(circle, var(--c, var(--accent)), transparent 70%); }
+.app:hover::before { opacity: .6; }
+.app:hover { border-color: color-mix(in srgb, var(--c, var(--accent)) 60%, var(--line));
+  box-shadow: 0 20px 50px -20px color-mix(in srgb, var(--c, var(--accent)) 50%, transparent); }
+.app img { box-shadow: 0 12px 28px -10px color-mix(in srgb, var(--c, var(--accent)) 70%, transparent); }
+.app .more { color: var(--c, var(--accent)); }
+
+@media (prefers-reduced-motion: reduce) { .app-hero .halo img.icon, .badge.soon::before { animation: none; } }
+@media (prefers-color-scheme: light) { body::after { opacity: .7; } }
+
+/* Контраст: белый текст на светлых цветах приложения (зелёный, оранжевый) иначе не читается */
+.btn.primary { background: linear-gradient(135deg, color-mix(in srgb, var(--glow) 64%, #000), color-mix(in srgb, var(--glow2) 64%, #000)); }
+@media (prefers-color-scheme: light) {
+  .hero h1 span { background-image: linear-gradient(135deg, color-mix(in srgb, var(--glow) 70%, #000), color-mix(in srgb, var(--glow2) 70%, #000)); }
+}
+
+/* Заголовок главной — заглавными */
+.hero h1.caps { text-transform: uppercase; letter-spacing: 0.01em; font-size: clamp(30px, 5.2vw, 52px); }
