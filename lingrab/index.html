@@ -31,9 +31,9 @@
     <p class="lead" data-i18n="heroLead">Hold ⌘ and drag over images, videos, PDFs or any app — the text is instantly in your clipboard. Translate it, fix the keyboard layout and keep a clipboard history.</p>
     <div class="cta">
       <a class="btn primary" href="download/Lingrab.dmg" data-i18n="download">Download free</a>
-      <a class="btn js-buy" href="#pricing"><span data-i18n="buyPro">Buy Pro</span> <small>€6</small></a>
+      <a class="btn js-buy" href="#pricing"><span data-i18n="buyPro">Pro — Mac App Store</span> <small data-i18n="soon">soon</small></a>
     </div>
-    <p class="req" data-i18n="requirements">macOS 14 Sonoma or later · Apple Silicon &amp; Intel · 7-day free trial of Pro</p>
+    <p class="req" data-i18n="requirements">macOS 14 Sonoma or later · Apple Silicon &amp; Intel</p>
 
     <div class="demo" aria-hidden="true">
       <div class="bar"><i></i><i></i><i></i></div>
@@ -83,7 +83,7 @@
         <div class="plan pro">
           <h3>Pro</h3>
           <div class="price">€6</div>
-          <div class="note" data-i18n="proNote">One-time purchase · up to 3 Macs</div>
+          <div class="note" data-i18n="proNote">Coming soon to the Mac App Store</div>
           <ul>
             <li data-i18n="pAll">Everything in Free</li>
             <li data-i18n="p4">Translation</li>
@@ -91,7 +91,7 @@
             <li data-i18n="p5">Custom shortcuts</li>
             <li data-i18n="p7">Free updates</li>
           </ul>
-          <a class="btn primary js-buy" href="#" data-i18n="buyPro">Buy Pro</a>
+          <span class="btn primary" style="opacity:.6;cursor:default" data-i18n="buyPro">Pro — Mac App Store</span>
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@
     <div class="wrap">
       <h2>FAQ</h2>
       <details><summary data-i18n="q1">How do I install Lingrab?</summary><p data-i18n="a1">Download the zip, move Lingrab to Applications and open it. macOS will ask for Accessibility and Screen Recording permissions — they are needed to detect ⌘ + drag and read the selected area.</p></details>
-      <details><summary data-i18n="q2">How do I activate Pro?</summary><p data-i18n="a2">After purchase you receive a license key by email. Open Lingrab → Settings → License, paste the key and click Activate.</p></details>
+      <details><summary data-i18n="q2">How do I get Pro?</summary><p data-i18n="a2">Pro will be available in the Mac App Store version of Lingrab as a one-time in-app purchase. The free version from this site keeps working without any limits in time.</p></details>
       <details><summary data-i18n="q3">Does Lingrab send my screen anywhere?</summary><p data-i18n="a3">No. Text recognition and translation happen on your Mac. The only network request is the license key check.</p></details>
       <details><summary data-i18n="q4">Can I get a refund?</summary><p data-i18n-html="a4">Yes, within 14 days of purchase. See the <a href="refund.html">refund policy</a>.</p></details>
     </div>
@@ -122,20 +122,22 @@
 
 <script>
 // Ссылка на оплату Lemon Squeezy — вписать после создания товара.
-const CHECKOUT_URL = "https://iroll.lemonsqueezy.com/checkout/buy/292ba043-1441-4a33-a5b5-6f1a2bed86dd";
+// Продажа ключей выключена (Lemon Squeezy не одобрил магазин): Pro будет в Mac App Store.
+const CHECKOUT_URL = "";
 document.querySelectorAll(".js-buy").forEach(a => {
   if (CHECKOUT_URL) { a.href = CHECKOUT_URL; a.target = "_blank"; a.rel = "noopener"; }
   else a.href = "#pricing";
 });
 
 const T = {
-  es: {"navFeatures": "Funciones", "navPricing": "Precios", "heroTitle": "Copia texto de <span>cualquier parte</span> de la pantalla", "heroLead": "Mantén ⌘ y arrastra sobre imágenes, vídeos, PDF o cualquier app: el texto pasa al instante al portapapeles. Tradúcelo, corrige la distribución de teclado y guarda el historial del portapapeles.", "download": "Descargar gratis", "buyPro": "Comprar Pro", "requirements": "macOS 14 Sonoma o posterior · Apple Silicon e Intel · 7 días de prueba gratis de Pro", "demoToast": "Copiado: Notas de la reunión — plan del T4…", "featuresTitle": "Todo en una pequeña app de la barra de menús", "f1t": "Copia texto de la pantalla", "f1d": "Mantén ⌘ y arrastra. Funciona con capturas, vídeos, PDF, juegos y apps que no dejan seleccionar texto.", "f2t": "Traducción instantánea", "f2d": "Mantén ⌥⌘ y arrastra para ver la traducción junto al cursor. Usa el traductor integrado de Apple y funciona sin conexión.", "f3t": "Corrector de distribución", "f3d": "¿Escribiste «ghbdtn» en vez de «привет»? Lingrab corrige la palabra y cambia la distribución automáticamente.", "f4t": "Historial del portapapeles", "f4d": "Todo lo que copias está en el menú: un clic para volver a copiarlo. Las contraseñas de los gestores de contraseñas se omiten.", "f5t": "18 idiomas de reconocimiento", "f5d": "Inglés, ruso, ucraniano, alemán, francés, español, chino, japonés, coreano y más. Interfaz en 12 idiomas.", "f6t": "Privado por diseño", "f6d": "El reconocimiento y la traducción se hacen en tu Mac. Tu pantalla y tu texto nunca salen del ordenador.", "pricingTitle": "Precios sencillos", "free": "Gratis", "freeNote": "Para siempre", "p1": "Copiar texto de la pantalla", "p2": "Corrector de distribución", "p3": "Historial del portapapeles (20 elementos)", "p4": "Traducción", "p5": "Atajos personalizados", "proNote": "Pago único · hasta 3 Mac", "pAll": "Todo lo de la versión gratuita", "p6": "Historial del portapapeles (hasta 500)", "p7": "Actualizaciones gratuitas", "q1": "¿Cómo instalo Lingrab?", "a1": "Descarga el zip, mueve Lingrab a Aplicaciones y ábrelo. macOS pedirá los permisos de Accesibilidad y Grabación de pantalla: hacen falta para detectar ⌘ + arrastrar y leer la zona seleccionada.", "q2": "¿Cómo activo Pro?", "a2": "Tras la compra recibirás una clave de licencia por correo. Abre Lingrab → Ajustes → Licencia, pega la clave y pulsa Activar.", "q3": "¿Lingrab envía mi pantalla a algún sitio?", "a3": "No. El reconocimiento de texto y la traducción se hacen en tu Mac. La única petición de red es la comprobación de la clave de licencia.", "q4": "¿Puedo pedir un reembolso?", "a4": "Sí, en los 14 días posteriores a la compra. Consulta la <a href=\"refund.html\">política de reembolsos</a>.", "terms": "Términos", "privacy": "Privacidad", "refund": "Reembolsos"},
+  es: {"soon": "pronto", "navFeatures": "Funciones", "navPricing": "Precios", "heroTitle": "Copia texto de <span>cualquier parte</span> de la pantalla", "heroLead": "Mantén ⌘ y arrastra sobre imágenes, vídeos, PDF o cualquier app: el texto pasa al instante al portapapeles. Tradúcelo, corrige la distribución de teclado y guarda el historial del portapapeles.", "download": "Descargar gratis", "buyPro": "Pro en la Mac App Store", "requirements": "macOS 14 Sonoma o posterior · Apple Silicon e Intel", "demoToast": "Copiado: Notas de la reunión — plan del T4…", "featuresTitle": "Todo en una pequeña app de la barra de menús", "f1t": "Copia texto de la pantalla", "f1d": "Mantén ⌘ y arrastra. Funciona con capturas, vídeos, PDF, juegos y apps que no dejan seleccionar texto.", "f2t": "Traducción instantánea", "f2d": "Mantén ⌥⌘ y arrastra para ver la traducción junto al cursor. Usa el traductor integrado de Apple y funciona sin conexión.", "f3t": "Corrector de distribución", "f3d": "¿Escribiste «ghbdtn» en vez de «привет»? Lingrab corrige la palabra y cambia la distribución automáticamente.", "f4t": "Historial del portapapeles", "f4d": "Todo lo que copias está en el menú: un clic para volver a copiarlo. Las contraseñas de los gestores de contraseñas se omiten.", "f5t": "18 idiomas de reconocimiento", "f5d": "Inglés, ruso, ucraniano, alemán, francés, español, chino, japonés, coreano y más. Interfaz en 12 idiomas.", "f6t": "Privado por diseño", "f6d": "El reconocimiento y la traducción se hacen en tu Mac. Tu pantalla y tu texto nunca salen del ordenador.", "pricingTitle": "Precios sencillos", "free": "Gratis", "freeNote": "Para siempre", "p1": "Copiar texto de la pantalla", "p2": "Corrector de distribución", "p3": "Historial del portapapeles (20 elementos)", "p4": "Traducción", "p5": "Atajos personalizados", "proNote": "Próximamente en la Mac App Store", "pAll": "Todo lo de la versión gratuita", "p6": "Historial del portapapeles (hasta 500)", "p7": "Actualizaciones gratuitas", "q1": "¿Cómo instalo Lingrab?", "a1": "Descarga el zip, mueve Lingrab a Aplicaciones y ábrelo. macOS pedirá los permisos de Accesibilidad y Grabación de pantalla: hacen falta para detectar ⌘ + arrastrar y leer la zona seleccionada.", "q2": "¿Cómo consigo Pro?", "a2": "Pro estará disponible en la versión de Lingrab de la Mac App Store como compra única dentro de la app. La versión gratuita de este sitio sigue funcionando sin límite de tiempo.", "q3": "¿Lingrab envía mi pantalla a algún sitio?", "a3": "No. El reconocimiento de texto y la traducción se hacen en tu Mac. La única petición de red es la comprobación de la clave de licencia.", "q4": "¿Puedo pedir un reembolso?", "a4": "Sí, en los 14 días posteriores a la compra. Consulta la <a href=\"refund.html\">política de reembolsos</a>.", "terms": "Términos", "privacy": "Privacidad", "refund": "Reembolsos"},
   ru: {
+    soon: "скоро",
     navFeatures: "Возможности", navPricing: "Цены",
     heroTitle: "Хватайте текст <span>откуда угодно</span> на экране",
     heroLead: "Зажмите ⌘ и выделите область на картинке, видео, PDF или в любой программе — текст сразу в буфере обмена. Переводите его, исправляйте раскладку и храните историю буфера.",
-    download: "Скачать бесплатно", buyPro: "Купить Pro",
-    requirements: "macOS 14 Sonoma или новее · Apple Silicon и Intel · 7 дней Pro бесплатно",
+    download: "Скачать бесплатно", buyPro: "Pro — в Mac App Store",
+    requirements: "macOS 14 Sonoma или новее · Apple Silicon и Intel",
     demoToast: "Скопировано: Meeting notes — Q4 plan…",
     featuresTitle: "Всё в одной маленькой программе в строке меню",
     f1t: "Текст с экрана", f1d: "Зажмите ⌘ и выделите. Работает со скриншотами, видео, PDF, играми и программами, где текст не выделяется.",
@@ -147,19 +149,20 @@ const T = {
     pricingTitle: "Простые цены", free: "Бесплатно", freeNote: "Навсегда",
     p1: "Копирование текста с экрана", p2: "Исправление раскладки", p3: "История буфера (20 записей)",
     p4: "Перевод", p5: "Свои сочетания клавиш", p6: "История буфера (до 500)", p7: "Бесплатные обновления",
-    pAll: "Всё из бесплатной версии", proNote: "Разовая покупка · до 3 Mac",
+    pAll: "Всё из бесплатной версии", proNote: "Скоро в Mac App Store",
     q1: "Как установить Lingrab?", a1: "Скачайте архив, перенесите Lingrab в «Программы» и откройте. macOS попросит разрешения «Универсальный доступ» и «Запись экрана» — они нужны, чтобы видеть ⌘ + выделение и читать выбранную область.",
-    q2: "Как активировать Pro?", a2: "После покупки вам на почту придёт лицензионный ключ. Откройте Lingrab → Настройки → Лицензия, вставьте ключ и нажмите «Активировать».",
+    q2: "Как получить Pro?", a2: "Pro будет доступна в версии Lingrab из Mac App Store как разовая встроенная покупка. Бесплатная версия с этого сайта продолжает работать без ограничения по времени.",
     q3: "Lingrab отправляет мой экран куда-то?", a3: "Нет. Распознавание и перевод происходят на вашем Mac. В интернет уходит только проверка лицензионного ключа.",
     q4: "Можно вернуть деньги?", a4: "Да, в течение 14 дней после покупки. Подробнее — в <a href=\"refund.html\">политике возврата</a>.",
     terms: "Условия", privacy: "Конфиденциальность", refund: "Возврат",
   },
   uk: {
+    soon: "незабаром",
     navFeatures: "Можливості", navPricing: "Ціни",
     heroTitle: "Хапайте текст <span>звідки завгодно</span> на екрані",
     heroLead: "Затисніть ⌘ і виділіть область на зображенні, відео, PDF чи в будь-якій програмі — текст одразу в буфері обміну. Перекладайте його, виправляйте розкладку й зберігайте історію буфера.",
-    download: "Завантажити безкоштовно", buyPro: "Купити Pro",
-    requirements: "macOS 14 Sonoma або новіша · Apple Silicon та Intel · 7 днів Pro безкоштовно",
+    download: "Завантажити безкоштовно", buyPro: "Pro — у Mac App Store",
+    requirements: "macOS 14 Sonoma або новіша · Apple Silicon та Intel",
     demoToast: "Скопійовано: Meeting notes — Q4 plan…",
     featuresTitle: "Усе в одній маленькій програмі в рядку меню",
     f1t: "Текст з екрана", f1d: "Затисніть ⌘ і виділіть. Працює зі знімками екрана, відео, PDF, іграми та програмами, де текст не виділяється.",
@@ -171,9 +174,9 @@ const T = {
     pricingTitle: "Прості ціни", free: "Безкоштовно", freeNote: "Назавжди",
     p1: "Копіювання тексту з екрана", p2: "Виправлення розкладки", p3: "Історія буфера (20 записів)",
     p4: "Переклад", p5: "Власні сполучення клавіш", p6: "Історія буфера (до 500)", p7: "Безкоштовні оновлення",
-    pAll: "Усе з безкоштовної версії", proNote: "Разова покупка · до 3 Mac",
+    pAll: "Усе з безкоштовної версії", proNote: "Незабаром у Mac App Store",
     q1: "Як встановити Lingrab?", a1: "Завантажте архів, перенесіть Lingrab у «Програми» й відкрийте. macOS попросить дозволи «Доступність» і «Запис екрана» — вони потрібні, щоб бачити ⌘ + виділення й читати вибрану область.",
-    q2: "Як активувати Pro?", a2: "Після покупки на пошту прийде ліцензійний ключ. Відкрийте Lingrab → Параметри → Ліцензія, вставте ключ і натисніть «Активувати».",
+    q2: "Як отримати Pro?", a2: "Pro буде доступна у версії Lingrab з Mac App Store як разова вбудована покупка. Безкоштовна версія з цього сайту продовжує працювати без обмеження в часі.",
     q3: "Lingrab кудись надсилає мій екран?", a3: "Ні. Розпізнавання й переклад відбуваються на вашому Mac. В інтернет іде лише перевірка ліцензійного ключа.",
     q4: "Чи можна повернути гроші?", a4: "Так, протягом 14 днів після покупки. Детальніше — у <a href=\"refund.html\">політиці повернення</a>.",
     terms: "Умови", privacy: "Конфіденційність", refund: "Повернення",
