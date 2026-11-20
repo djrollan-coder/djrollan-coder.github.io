@@ -9,11 +9,13 @@
 <meta property="og:title" content="Roman Motornyi — Apps">
 <meta property="og:description" content="Apps for Mac and iPhone by Roman Motornyi: Lingrab, All Commander, DJ Pro 4 iRoll, All Radio, BigBattery.">
 <meta property="og:url" content="https://djrollan-coder.github.io/">
+<link rel="canonical" href="https://djrollan-coder.github.io/">
 <meta property="og:image" content="https://djrollan-coder.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Apps for Mac and iPhone by Roman Motornyi: Lingrab, All Commander, DJ Pro 4 iRoll, All Radio, BigBattery.">
 <link rel="icon" href="lingrab/assets/favicon.png">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Roman Motornyi — Apps", "url": "https://djrollan-coder.github.io/", "author": {"@type": "Person", "name": "Roman Motornyi", "url": "https://djrollan-coder.github.io/", "sameAs": ["https://t.me/iroll", "https://github.com/djrollan-coder"]}}</script>
 </head>
 <body>
 <header>
@@ -21,6 +23,7 @@
     <a class="brand" href="./">Roman Motornyi <span class="badge">Apps</span></a>
     <nav>
       <a class="hide-sm" href="#apps" data-i18n="navApps">Apps</a>
+      <a href="articles/" data-i18n-href="href_all" data-i18n="navArticles">Articles</a>
       <a class="hide-sm" href="mailto:djrollan1@gmail.com" data-i18n="navContact">Contact</a>
       <select class="lang" id="lang" aria-label="Language">
         <option value="en">English</option><option value="ru">Русский</option><option value="uk">Українська</option><option value="es">Español</option>
@@ -43,14 +46,14 @@
           <img src="lingrab/assets/icon.png" alt="">
           <h3>Lingrab <span class="badge">Mac</span></h3>
           <div class="plat">macOS 14+</div>
-          <p data-i18n="lingrab">Hold ⌘ and drag to copy text from anywhere on screen. Translate it, fix the wrong keyboard layout and keep clipboard history.</p>
+          <p data-i18n="lingrab">Press ⌥⌘1 and drag to copy text from anywhere on screen. Read it aloud, translate it, fix the wrong keyboard layout and keep a clipboard history.</p>
           <span class="more" data-i18n="more">Learn more →</span>
         </a>
         <a class="app" href="allcommander/" style="--c:#3fa2ff">
           <img src="allcommander/assets/icon.png" alt="">
           <h3>All Commander <span class="badge soon" data-i18n="soon">Coming soon</span></h3>
           <div class="plat">macOS 13+</div>
-          <p data-i18n="allcommander">A fast dual-pane file manager in the spirit of Total Commander, with F-keys, tabs, a built-in terminal and an audio player.</p>
+          <p data-i18n="allcommander">A fast dual-pane file manager in the spirit of Total Commander, with F-keys, tabs, batch rename, a duplicate finder and zip archives.</p>
           <span class="more" data-i18n="more">Learn more →</span>
         </a>
         <a class="app" href="djpro4/" style="--c:#3d7bff">
@@ -77,6 +80,19 @@
       </div>
     </div>
   </section>
+  <section id="guides">
+    <div class="wrap" style="max-width:760px">
+      <h2 data-i18n="guidesTitle">Guides</h2>
+      <div class="posts">
+      <a class="post" href="articles/copy-text-from-image-mac.html" data-i18n-href="href_copy_text_from_image_mac" style="--glow:#5b6cff"><span class="tag">Lingrab</span><h3 data-i18n="t_copy_text_from_image_mac">How to copy text from an image, video or PDF on a Mac</h3></a>
+      <a class="post" href="articles/fix-wrong-keyboard-layout-mac.html" data-i18n-href="href_fix_wrong_keyboard_layout_mac" style="--glow:#5b6cff"><span class="tag">Lingrab</span><h3 data-i18n="t_fix_wrong_keyboard_layout_mac">Typed “ghbdtn” instead of “привет”? Fixing wrong-layout text on a Mac</h3></a>
+      <a class="post" href="articles/mac-clipboard-history.html" data-i18n-href="href_mac_clipboard_history" style="--glow:#5b6cff"><span class="tag">Lingrab</span><h3 data-i18n="t_mac_clipboard_history">How to see your clipboard history on a Mac</h3></a>
+      <a class="post" href="articles/exact-battery-percentage-iphone.html" data-i18n-href="href_exact_battery_percentage_iphone" style="--glow:#34c759"><span class="tag">BigBattery</span><h3 data-i18n="t_exact_battery_percentage_iphone">How to see the exact battery percentage on iPhone</h3></a>
+      <a class="post" href="articles/iphone-bedside-clock-standby.html" data-i18n-href="href_iphone_bedside_clock_standby" style="--glow:#34c759"><span class="tag">BigBattery</span><h3 data-i18n="t_iphone_bedside_clock_standby">Turn your iPhone into a bedside clock while it charges</h3></a>
+      </div>
+    <p style="text-align:center;margin-top:22px"><a href="articles/" data-i18n-href="href_all" data-i18n="allArticles">All articles →</a></p>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -89,27 +105,27 @@
 <script src="i18n.js"></script>
 <script>
 setupI18n({
-  es: {"navApps": "Apps", "navContact": "Contacto", "heroTitle": "Pequeñas apps que <span>simplemente funcionan</span>", "heroLead": "Apps nativas para Mac y iPhone: rápidas, privadas y hechas con atención al detalle.", "lingrab": "Mantén ⌘ y arrastra para copiar texto de cualquier parte de la pantalla. Tradúcelo, corrige la distribución de teclado equivocada y guarda el historial del portapapeles.", "allcommander": "Un gestor de archivos rápido de dos paneles al estilo de Total Commander, con teclas F, pestañas, terminal integrado y reproductor de audio.", "djpro4": "Una app de DJ para Mac que funciona con equipos Denon DJ: controladores LC6000 Prime, el mezclador X1850 Prime, bibliotecas de Engine DJ y mucho más.", "allradio": "Miles de emisoras de todo el mundo por género y país, con búsqueda por ambiente.", "bigbattery": "Un indicador de carga enorme y legible: en la pantalla, en widgets de la pantalla de bloqueo y de inicio y en StandBy. Gratis en el App Store.", "more": "Más información →", "soon": "Próximamente"},
-  ru: {
+  es: {"navArticles": "Guías", "allArticles": "Todos los artículos →", "guidesTitle": "Guías", "navApps": "Apps", "navContact": "Contacto", "heroTitle": "Pequeñas apps que <span>simplemente funcionan</span>", "heroLead": "Apps nativas para Mac y iPhone: rápidas, privadas y hechas con atención al detalle.", "lingrab": "Pulsa ⌥⌘1 y arrastra para copiar texto de cualquier parte de la pantalla. Escúchalo, tradúcelo, corrige la distribución de teclado y guarda el historial del portapapeles.", "allcommander": "Un gestor de archivos rápido de dos paneles al estilo de Total Commander, con teclas F, pestañas, renombrado por lotes, buscador de duplicados y archivos zip.", "djpro4": "Una app de DJ para Mac que funciona con equipos Denon DJ: controladores LC6000 Prime, el mezclador X1850 Prime, bibliotecas de Engine DJ y mucho más.", "allradio": "Miles de emisoras de todo el mundo por género y país, con búsqueda por ambiente.", "bigbattery": "Un indicador de carga enorme y legible: en la pantalla, en widgets de la pantalla de bloqueo y de inicio y en StandBy. Gratis en el App Store.", "more": "Más información →", "soon": "Próximamente"},
+  ru: {href_all: "articles/ru/", href_iphone_bedside_clock_standby: "articles/ru/iphone-bedside-clock-standby.html", t_iphone_bedside_clock_standby: "Как превратить iPhone в прикроватные часы на время зарядки", href_exact_battery_percentage_iphone: "articles/ru/exact-battery-percentage-iphone.html", t_exact_battery_percentage_iphone: "Как увидеть точный процент заряда на iPhone", href_mac_clipboard_history: "articles/ru/mac-clipboard-history.html", t_mac_clipboard_history: "Как посмотреть историю буфера обмена на Mac", href_fix_wrong_keyboard_layout_mac: "articles/ru/fix-wrong-keyboard-layout-mac.html", t_fix_wrong_keyboard_layout_mac: "Набрали «ghbdtn» вместо «привет»? Как исправить раскладку на Mac", href_copy_text_from_image_mac: "articles/ru/copy-text-from-image-mac.html", t_copy_text_from_image_mac: "Как скопировать текст с картинки, видео или PDF на Mac", navArticles: "Статьи", allArticles: "Все статьи →", guidesTitle: "Статьи", 
     navApps: "Приложения", navContact: "Связаться",
     heroTitle: "Маленькие приложения, которые <span>просто работают</span>",
     heroLead: "Нативные приложения для Mac и iPhone — быстрые, конфиденциальные и сделанные с вниманием к деталям.",
-    lingrab: "Зажмите ⌘ и выделите — текст с любой части экрана в буфере. Перевод, исправление раскладки и история буфера.",
+    lingrab: "Нажмите ⌥⌘1 и выделите — текст с любой части экрана в буфере. Чтение вслух, перевод, исправление раскладки и история буфера.",
     allradio: "Тысячи радиостанций со всего мира по жанрам и странам, с поиском по настроению.",
     bigbattery: "Огромный, хорошо читаемый индикатор заряда — на экране, в виджетах экрана блокировки и «Домой» и в StandBy. Бесплатно в App Store.",
     djpro4: "DJ-приложение для Mac, которое работает с техникой Denon DJ: контроллерами LC6000 Prime, микшером X1850 Prime и медиатеками Engine DJ и не только.",
-    allcommander: "Быстрый двухпанельный файловый менеджер в духе Total Commander: F-клавиши, вкладки, встроенный терминал и аудиоплеер.",
+    allcommander: "Быстрый двухпанельный файловый менеджер в духе Total Commander: F-клавиши, вкладки, пакетное переименование, поиск дубликатов и zip-архивы.",
     more: "Подробнее →", soon: "Скоро",
   },
-  uk: {
+  uk: {navArticles: "Статті", allArticles: "Усі статті →", guidesTitle: "Статті", 
     navApps: "Застосунки", navContact: "Зв’язатися",
     heroTitle: "Маленькі застосунки, які <span>просто працюють</span>",
     heroLead: "Нативні застосунки для Mac та iPhone — швидкі, конфіденційні й зроблені з увагою до деталей.",
-    lingrab: "Затисніть ⌘ і виділіть — текст з будь-якої частини екрана в буфері. Переклад, виправлення розкладки та історія буфера.",
+    lingrab: "Натисніть ⌥⌘1 і виділіть — текст з будь-якої частини екрана в буфері. Читання вголос, переклад, виправлення розкладки та історія буфера.",
     allradio: "Тисячі радіостанцій з усього світу за жанрами й країнами, з пошуком за настроєм.",
     bigbattery: "Величезний, добре помітний індикатор заряду — на екрані, у віджетах екрана блокування й «Дім» і в StandBy. Безкоштовно в App Store.",
     djpro4: "DJ-застосунок для Mac, що працює з технікою Denon DJ: контролерами LC6000 Prime, мікшером X1850 Prime і медіатеками Engine DJ і не тільки.",
-    allcommander: "Швидкий двопанельний файловий менеджер у дусі Total Commander: F-клавіші, вкладки, вбудований термінал та аудіоплеєр.",
+    allcommander: "Швидкий двопанельний файловий менеджер у дусі Total Commander: F-клавіші, вкладки, пакетне перейменування, пошук дублікатів і zip-архіви.",
     more: "Детальніше →", soon: "Незабаром",
   },
 });

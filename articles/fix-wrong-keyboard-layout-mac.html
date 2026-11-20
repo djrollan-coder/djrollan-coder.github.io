@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typed “ghbdtn” instead of “привет”? Fixing wrong-layout text on a Mac</title>
+<meta name="description" content="Why text comes out as gibberish when the keyboard layout is wrong, how to avoid it in macOS settings, and how to convert already-typed text back without retyping.">
+<link rel="canonical" href="https://djrollan-coder.github.io/articles/fix-wrong-keyboard-layout-mac.html">
+<link rel="alternate" hreflang="en" href="https://djrollan-coder.github.io/articles/fix-wrong-keyboard-layout-mac.html">
+<link rel="alternate" hreflang="ru" href="https://djrollan-coder.github.io/articles/ru/fix-wrong-keyboard-layout-mac.html">
+<link rel="alternate" hreflang="x-default" href="https://djrollan-coder.github.io/articles/fix-wrong-keyboard-layout-mac.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Roman Motornyi — Apps">
+<meta property="og:title" content="Typed “ghbdtn” instead of “привет”? Fixing wrong-layout text on a Mac">
+<meta property="og:description" content="Why text comes out as gibberish when the keyboard layout is wrong, how to avoid it in macOS settings, and how to convert already-typed text back without retyping.">
+<meta property="og:url" content="https://djrollan-coder.github.io/articles/fix-wrong-keyboard-layout-mac.html">
+<meta property="og:image" content="https://djrollan-coder.github.io/lingrab/assets/icon.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../lingrab/assets/favicon.png">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Typed “ghbdtn” instead of “привет”? Fixing wrong-layout text on a Mac", "description": "Why text comes out as gibberish when the keyboard layout is wrong, how to avoid it in macOS settings, and how to convert already-typed text back without retyping.", "inLanguage": "en", "datePublished": "2026-11-20", "dateModified": "2026-11-20", "author": {"@type": "Person", "name": "Roman Motornyi", "url": "https://djrollan-coder.github.io/"}, "publisher": {"@type": "Person", "name": "Roman Motornyi", "url": "https://djrollan-coder.github.io/"}, "image": "https://djrollan-coder.github.io/lingrab/assets/icon.png", "mainEntityOfPage": "https://djrollan-coder.github.io/articles/fix-wrong-keyboard-layout-mac.html"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Apps", "item": "https://djrollan-coder.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://djrollan-coder.github.io/articles/"}, {"@type": "ListItem", "position": 3, "name": "Typed “ghbdtn” instead of “привет”? Fixing wrong-layout text on a Mac", "item": "https://djrollan-coder.github.io/articles/fix-wrong-keyboard-layout-mac.html"}]}]</script>
+</head>
+<body style="--glow:#5b6cff; --glow2:#8a4fff">
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">Roman Motornyi <span class="badge">Apps</span></a>
+    <nav>
+      <a class="hide-sm" href="../">Apps</a>
+      <a href="../articles/">Articles</a>
+      <a class="lang-switch" href="ru/fix-wrong-keyboard-layout-mac.html" hreflang="ru">RU</a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="article">
+  <nav class="crumbs"><a href="../">Apps</a> / <a href="./">Articles</a></nav>
+  <h1>Typed “ghbdtn” instead of “привет”? Fixing wrong-layout text on a Mac</h1>
+  <div class="meta"><span>By Roman Motornyi</span><time datetime="2026-11-20">November 20, 2026</time><span>2 min read</span><a href="ru/fix-wrong-keyboard-layout-mac.html" hreflang="ru">Читать на русском</a></div>
+  <p class="intro">If you type in two alphabets, you know the moment: you look up from the keyboard and see “ghbdtn” where “привет” should be. The text is not lost — every letter is just in the wrong layout. Here is why it happens and how to fix it without retyping.</p>
+<h2>Why it happens</h2>
+<p>The Russian ЙЦУКЕН layout and the English QWERTY layout share the same physical keys. When the wrong input source is active, each key still produces a letter — just from the other alphabet. So “привет” becomes “ghbdtn”, and “hello” typed in Russian comes out as “руддщ”.</p>
+<p>Because the mapping is one key to one key, the text can be converted back exactly. Even the punctuation keys follow the rule: <kbd>;</kbd> is ж, <kbd>'</kbd> is э, <kbd>[</kbd> is х, <kbd>]</kbd> is ъ, <kbd>,</kbd> is б and <kbd>.</kbd> is ю.</p>
+
+<h2>Fix it without retyping</h2>
+<p><a href="../lingrab/">Lingrab</a> adds a command to the macOS Services menu that converts selected text to the other layout, right where you typed it:</p>
+<ol>
+<li>Select the wrong text — “ghbdtn”.</li>
+<li>Right-click it, or open the app menu, and choose <strong>Services</strong>.</li>
+<li>Pick the Lingrab command. The word turns into “привет” in place.</li>
+</ol>
+<p>Because it is a system service, it works in most apps that let you edit text: Notes, Mail, Pages, browsers, messengers.</p>
+<div class="note"><p><strong>Make it one keystroke.</strong> Open System Settings → Keyboard → Keyboard Shortcuts → Services, find the Lingrab command under Text and assign it a shortcut. Then you just select and press it.</p></div>
+
+<h2>Make it happen less often</h2>
+<ul>
+<li><strong>Use a quick switch.</strong> In System Settings → Keyboard → Keyboard Shortcuts → Input Sources you can set the shortcut for “Select the previous input source”, usually <kbd>⌃Space</kbd>. On Mac keyboards with a Globe key you can also set the Globe key to change the input source.</li>
+<li><strong>Keep the input menu visible.</strong> In System Settings → Keyboard → Input Sources, turn on “Show Input menu in menu bar”, so the current layout is always in sight.</li>
+<li><strong>Let each document remember its language.</strong> Turn on “Automatically switch to a document's input source” in the same place: a Russian chat stays Russian and an English email stays English.</li>
+</ul>
+
+<h2>Questions</h2>
+<h3>Does it fix only Russian and English?</h3>
+<p>The classic case is QWERTY ↔ ЙЦУКЕН, which is what Lingrab's command is built for.</p>
+<h3>Is it free?</h3>
+<p>Yes. The layout fix is part of the free version of Lingrab, together with copying text from the screen and the clipboard history.</p>
+  <div class="app-cta">
+    <img class="icon" src="../lingrab/assets/icon.png" alt="">
+    <div>
+      <h3><a href="../lingrab/">Lingrab</a></h3>
+      <p>Copy text from anywhere on your Mac screen. Free on the Mac App Store.</p>
+      <a class="store-badge" href="https://apps.apple.com/app/id6826781072" target="_blank" rel="noopener"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/en-us" alt="Download on the Mac App Store"></a>
+    </div>
+  </div>
+  <section class="related">
+    <h2>More articles</h2>
+    <div class="posts">
+<a class="post" href="copy-text-from-image-mac.html" style="--glow:#5b6cff"><span class="tag">Lingrab · Mac</span><h3>How to copy text from an image, video or PDF on a Mac</h3><p>Three ways to copy text you can&#x27;t select on a Mac: Live Text in Preview and Photos, a screenshot plus Live Text, and a one-shortcut capture from anywhere on screen.</p></a>
+<a class="post" href="mac-clipboard-history.html" style="--glow:#5b6cff"><span class="tag">Lingrab · Mac</span><h3>How to see your clipboard history on a Mac</h3><p>The Mac clipboard keeps one item at a time. Here is how to see what is on it, where newer macOS versions keep a history, and how to get a safe history that skips passwords.</p></a>
+<a class="post" href="exact-battery-percentage-iphone.html" style="--glow:#34c759"><span class="tag">BigBattery · iPhone</span><h3>How to see the exact battery percentage on iPhone</h3><p>Where iPhone shows the battery percentage, why apps only get it in 5% steps, and how to see a precise, readable charge level from across the room.</p></a>
+    </div>
+  </section>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Roman Motornyi</span>
+    <nav><a href="https://t.me/iroll" target="_blank" rel="noopener">Telegram</a><a href="mailto:djrollan1@gmail.com">djrollan1@gmail.com</a></nav>
+  </div>
+</footer>
+</body>
+</html>
