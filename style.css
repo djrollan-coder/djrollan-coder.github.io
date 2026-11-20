@@ -205,3 +205,13 @@ body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-event
 
 /* Заголовок главной — заглавными */
 .hero h1.caps { text-transform: uppercase; letter-spacing: 0.01em; font-size: clamp(30px, 5.2vw, 52px); }
+
+/* Официальный значок App Store */
+.store-badge { display: inline-flex; align-items: center; }
+.store-badge img { height: 50px; width: auto; display: block; }
+.store-badge:hover { filter: brightness(1.15); }
+
+/* Страница 404 */
+.code404 { font-size: clamp(90px, 18vw, 160px); font-weight: 800; line-height: 1; letter-spacing: -0.04em;
+  background: linear-gradient(135deg, var(--glow), var(--glow2)); -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 18px 40px color-mix(in srgb, var(--glow) 40%, transparent)); }

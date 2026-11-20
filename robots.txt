@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djrollan-coder.github.io/sitemap.xml
