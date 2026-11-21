@@ -196,7 +196,7 @@ function apply(lang) {
 let saved = null;
 try { saved = localStorage.getItem("lang"); } catch {}
 const browser = (navigator.language || "en").slice(0, 2);
-apply(saved || (T[browser] ? browser : "en"));
+apply(T[saved] ? saved : (T[browser] ? browser : "en"));
 sel.addEventListener("change", () => apply(sel.value));
 </script>
 </body>

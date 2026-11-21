@@ -18,6 +18,6 @@ function setupI18n(T) {
   let saved = null;
   try { saved = localStorage.getItem("lang"); } catch {}
   const browser = (navigator.language || "en").slice(0, 2);
-  apply(saved || (T[browser] || browser === "en" ? browser : "en"));
+  apply(T[saved] ? saved : (T[browser] ? browser : "en"));
   if (sel) sel.addEventListener("change", () => apply(sel.value));
 }
